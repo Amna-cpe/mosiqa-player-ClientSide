@@ -1,0 +1,41 @@
+.controlBar{
+  background-color:  transparent !important;
+}
+.controlBar > .button:enabled:hover {
+  fill: #1ed15e;
+}
+
+
+.volumeControl::-moz-range-thumb, .scrubber::-moz-range-thumb{
+  background-color: #1ed15e !important;
+}
+.volumeControl{
+  background-color: #1ed15e !important;
+}
+
+.volumeControl::-moz-range-progress{
+  background-color: #1ed15e !important;
+}
+
+
+
+@font-face {
+  font-family: gothan;
+
+  src: url("./fonts/GothamMedium.otf") format("opentype");
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+* {
+  margin: 0;
+  scrollbar-width: none;
+  font-family: gothan, sans-serif;
+}
+a{
+  text-decoration: none;
+}
+input{
+  border:none;
+}

@@ -1,0 +1,28 @@
+.login {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+
+}
+
+.login > img {
+  width: 100%;
+}
+.login > a {
+  padding: 20px;
+  background-color: #1db954;
+  color: #fafafa;
+  border-radius: 99px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.login > a:hover {
+  background-color: #28c75f;
+}
+
+.player__body{
+  
+  display: flex;
+    
+}
