@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, {  useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import HomeFilled from "@material-ui/icons/Home";
 import SearchFilled from "@material-ui/icons/Search";

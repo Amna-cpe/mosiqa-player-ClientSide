@@ -4,12 +4,12 @@ import SongRow from "./SongRow";
 import { useProvider } from "../context/Provider";
 
 function Mysongs() {
-  const [{ loading, songs, user }] = useProvider();
+  const [{  songs, user }] = useProvider();
   const [Mysongs, setMysongs] = useState([]);
 
   useEffect(() => {
     setMysongs(songs.filter((s) => s.username === user.username));
-  }, []);
+  },[]);
 
   console.log(Mysongs);
 

@@ -4,7 +4,7 @@ import SongRow from "./SongRow";
 import { useProvider } from "../context/Provider";
 
 function SearchView() {
-  const [{ loading, results, errors }] = useProvider();
+  const [{ loading, results }] = useProvider();
 
   return (
     <div className="body__songs">

@@ -7,10 +7,11 @@ import { useProvider } from "../context/Provider";
 
 function HomePage() {
   const [{ songs, user, loading }, dispatch] = useProvider();
+  const check = user.likes && user.likes
 
   useEffect(() => {
     getSongs(dispatch);
-  }, [user.likes && user.likes]);
+  }, [check]);
 
   return (
     <>

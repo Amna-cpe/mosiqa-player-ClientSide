@@ -3,21 +3,15 @@ import "./styles/index.css";
 import SideBarOptions from "./SideBarOptions";
 import Home from "@material-ui/icons/HomeOutlined";
 import Search from "@material-ui/icons/SearchOutlined";
-import LibraryMusicIcon from "@material-ui/icons/LibraryMusicOutlined";
-import Person from "@material-ui/icons/Person";
 import axios from "axios";
 import { useProvider } from "../context/Provider";
 
 import { Link } from "react-router-dom";
-import { logout } from "../context/actions";
+
 
 function SideBar() {
   const [{ user }, dispatch] = useProvider();
-  let chosenIcons = {
-    home: Home,
-    search: Search,
-    music: LibraryMusicIcon,
-  };
+
 
   const logout = () => {
     dispatch({ type: "LOG_OUT" });

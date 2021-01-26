@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import img from "./musi.png";
-import PlayCircleFilledIcon from "@material-ui/icons/PlayCircleFilled";
 import FavoriteIcon from "@material-ui/icons/Favorite";
-import { like, getSongs } from "../context/actions";
+import { like} from "../context/actions";
 import { useProvider } from "../context/Provider";
 import { useHistory } from "react-router-dom";
 
@@ -20,7 +19,7 @@ function SongRow({ username, likeCount, songName, songId, url }) {
     setIsLiked(
       user.likes && user.likes.find((l) => l.songId === songId) ? "error" : ""
     );
-  }, [user.likes && user.likes]);
+  }, [user?.likes]);
 
   useEffect(() => {
 
@@ -55,7 +54,7 @@ function SongRow({ username, likeCount, songName, songId, url }) {
   return (
     <div className={`songRow ${playingCSS}` } id="song" onClick={handlePLaySong}>
       <div className="songRow_left">
-        <img className="songRow__album" src={img} lt="" />
+        <img className="songRow__album" src={img} alt="album" />
         <div className="songRow__info">
           <h1>{songName}</h1>
           <p>{username}</p>

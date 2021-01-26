@@ -101,8 +101,8 @@ function SignUp() {
                 value={userData.password}
                 onChange={handlechange}
                 autoComplete="current-password"
-                error={errors&&errors.password  || errors&&errors.error}
-                helperText={errors&&errors.password || errors&&errors.error}
+                error={(errors&&(errors.password))  || (errors&&(errors.error))}
+                helperText={(errors&&(errors.password)) || (errors&&(errors.error))}
               />
             </Grid>
 

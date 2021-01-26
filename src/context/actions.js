@@ -119,7 +119,6 @@ export const like = (songId, dispatch) => {
 
 export const search = (searchItem, dispatch) => {
   console.log("at the reducer", searchItem);
-  const searchObj = { search: searchItem };
   dispatch({ type: "SET_LOADING" });
 
   axios
@@ -153,7 +152,7 @@ const AuthRoute = (token) => {
   axios.defaults.headers.common["Authorization"] = AuthToken;
 };
 
-export const checkToken = () => (dispatch) => {
+export const checkToken = (dispatch) => {
   const token = localStorage.getItem("AuthToken");
 
   if (token) {
